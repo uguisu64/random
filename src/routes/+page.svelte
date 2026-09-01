@@ -8,7 +8,8 @@
     let seed = $state(0)
 </script>
 
-<h1>Random Number Generator and Visualization</h1>
+<h1>Entropy Machine</h1>
+<p>Random Generator Visualization</p>
 
 <select bind:value={generatorId}>
     {#each generators as generator, i}

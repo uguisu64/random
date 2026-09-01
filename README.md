@@ -1,42 +1,36 @@
-# sv
+# Entropy Machine
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+サークル内ゲームジャムのテーマ「ランダム」に合わせて制作している，乱数生成器の比較・可視化ツールです．
 
-## Creating a project
+ゲームというより，疑似乱数や乱数の性質を見て遊ぶための小さな展示物を目指しています．
 
-If you're seeing this, you've probably already done this step. Congrats!
+## できること
 
-```sh
-# create a new project
-npx sv create my-app
-```
+* 複数の乱数生成方式を切り替えて比較
+* ヒストグラム表示
+* 2次元散布図
+* 3次元散布図
+* ビットマップ表示
 
-To recreate this project with the same configuration:
+## 実装中の乱数生成器
 
-```sh
-# recreate this project
-npx sv@0.17.0 create --template minimal --no-types --install npm ./
-```
+* JavaScript `Math.random()`
+* Web Crypto
+* Java `java.util.Random`
+* RANDU
+* Middle-square method
 
-## Developing
+特にRANDUなど，見た目上はランダムでも高次元では規則性が現れる乱数生成器を可視化して楽しむことを目的にしています．
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 開発
 
-```sh
+SvelteKitで実装しています．
+
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## 状態
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+ゲームジャム向けに制作中です．
